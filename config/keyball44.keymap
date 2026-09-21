@@ -172,7 +172,7 @@
 &kp ESC    &kp Q         &kp W         &kp F          &kp P          &kp B            &kp J          &kp L         &kp U         &kp Y         &kp SEMI    &kp BSPC
 &kp TAB    &hml LGUI A   &hml LALT R   &hml LCTRL S   &hml LSHFT T   &kp G            &kp M          &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI O &kp SQT
 &kp LCTRL &kp Z         &kp X         &kp C          &kp D          &kp V            &kp K          &kp H         &kp COMMA     &kp DOT       &kp FSLH    &lt SCROLL TAB
-&sk LGUI   &sk LALT      &lt ADJ DEL   &lt NUM SPACE  &lt NAV RET    &kp SPACE  &kp BSPC                                                   &lt SYMN RSHFT 
+&sk LGUI   &sk LALT      &lt ADJ DEL   &lt NUM SPACE  &lt NAV RET    &kp SPACE  &kp BSPC                                                   &lt SYM RSHFT 
             >;
         };
 
