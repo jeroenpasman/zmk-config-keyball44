@@ -159,9 +159,9 @@
 //  ├──────┼──────┼──────┼──────┼──────┼──────┤         ├──────┼──────┼──────┼──────┼──────┼──────┤
 //  │ TAB  │A/GUI │R/ALT │S/CTL │T/SFT │  G   │         │  M   │N/SFT │E/CTL │I/ALT │O/GUI │  '   │
 //  ├──────┼──────┼──────┼──────┼──────┼──────┤         ├──────┼──────┼──────┼──────┼──────┼──────┤
-//  │ CAPS │  Z   │  X   │  C   │  D   │  V   │         │  K   │  H   │  ,   │  .   │  /   │ RSFT │
+//  │ CTL  │  Z   │  X   │  C   │  D   │  V   │         │  K   │  H   │  ,   │  .   │  /   │SCRL/TAB │
 //  └──────┴──────┴──┬───┴──┬───┴──┬───┴──┬───┴──┬───┐  ├──┬───┴──┬───┴──────┴──────┴──────┴──────┘
-//                   │sGUI  │sALT  │ADJ/⌦ │NUM/␣ │NAV/⏎│  │MSE/␣ │SYM/⌫│SCR/⇥│
+//                   │sGUI  │sALT  │ADJ/⌦│NUM/␣ │NAV/⏎│  │  ␣    │   ⌫│SYM/RSFT│
 //                   └──────┴──────┴──────┴──────┴─────┘  └──────┴──────┴──────┘
 //
 // CAPS = caps-word (auto-disables after the word; continues through _ and -)
@@ -171,8 +171,8 @@
             bindings = <
 &kp ESC    &kp Q         &kp W         &kp F          &kp P          &kp B            &kp J          &kp L         &kp U         &kp Y         &kp SEMI    &kp BSPC
 &kp TAB    &hml LGUI A   &hml LALT R   &hml LCTRL S   &hml LSHFT T   &kp G            &kp M          &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I   &hmr RGUI O &kp SQT
-&caps_word &kp Z         &kp X         &kp C          &kp D          &kp V            &kp K          &kp H         &kp COMMA     &kp DOT       &kp FSLH    &kp RSHFT
-&sk LGUI   &sk LALT      &lt ADJ DEL   &lt NUM SPACE  &lt NAV RET    &lt MOUSE SPACE  &lt SYM BSPC                                              &lt SCROLL TAB
+&kp LCTRL &kp Z         &kp X         &kp C          &kp D          &kp V            &kp K          &kp H         &kp COMMA     &kp DOT       &kp FSLH    &lt SCROLL TAB
+&sk LGUI   &sk LALT      &lt ADJ DEL   &lt NUM SPACE  &lt NAV RET    &kp SPACE  &kp BSPC                                                   &lt SYMN RSHFT 
             >;
         };
 
@@ -206,9 +206,9 @@
 //  ┌──────┬──────┬──────┬──────┬──────┬──────┐         ┌──────┬──────┬──────┬──────┬──────┬──────┐
 //  │      │  !   │  @   │  #   │  $   │  %   │         │  ^   │  &   │  Ü   │  '   │  "   │      │
 //  ├──────┼──────┼──────┼──────┼──────┼──────┤         ├──────┼──────┼──────┼──────┼──────┼──────┤
-//  │      │  Ä   │      │  ß   │      │      │         │ MUTE │  ¥   │  €   │  £   │  Ö   │      │
+//  │  \   │  Ä   │      │  ß   │      │      │         │ MUTE │  ¥   │  €   │  £   │  Ö   │      │
 //  ├──────┼──────┼──────┼──────┼──────┼──────┤         ├──────┼──────┼──────┼──────┼──────┼──────┤
-//  │      │EMAIL1│EMAIL2│      │      │      │         │ VOL- │ VOL+ │ PRV  │ NXT  │  \   │  |   │
+//  │  |   │EMAIL1│EMAIL2│      │      │      │         │ VOL- │ VOL+ │ PRV  │ NXT  │  \   │      │
 //  └──────┴──────┴──┬───┴──┬───┴──┬───┴──┬───┴──┬───┐  ├──┬───┴──┬───┴──────┴──────┴──────┴──────┘
 //                   │      │      │ ADJ  │      │      │  │      │  ▓▓▓ │  ⏯   │
 //                   └──────┴──────┴──────┴───────┴──────┘  └──────┴──────┴──────┘
@@ -219,8 +219,8 @@
             label = "SYM";
             bindings = <
 &trans     &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT        &kp CARET      &kp AMPS      &kp RA(U)     &kp SQT       &kp DQT      &trans
-&trans     &kp RA(A)     &trans        &kp RA(S)      &trans         &trans           &kp C_MUTE     &kp LS(RA(N4)) &kp RA(N5)   &kp RA(N4)    &kp RA(O)    &trans
-&trans     &kp RA(F18)   &kp RA(F19)   &trans         &trans         &trans           &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT    &kp BSLH     &kp PIPE
+&kp BSLH   &kp RA(A)     &trans        &kp RA(S)      &trans         &trans           &kp C_MUTE     &kp LS(RA(N4)) &kp RA(N5)   &kp RA(N4)    &kp RA(O)    &trans
+&kp PIPE   &kp RA(F18)   &kp RA(F19)   &trans         &trans         &trans           &kp C_VOL_DN   &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT    &kp BSLH     &trans
 &trans     &trans        &mo ADJ       &trans         &trans         &trans           &trans                                                    &kp C_PP
             >;
         };
