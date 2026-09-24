@@ -266,16 +266,16 @@
 //  │      │      │      │      │      │      │         │ PGUP │ LCLK │ MCLK │ RCLK │      │      │
 //  ├──────┼──────┼──────┼──────┼──────┼──────┤         ├──────┼──────┼──────┼──────┼──────┼──────┤
 //  │      │      │      │      │      │      │         │ PGDN │      │      │      │      │      │
-//  └──────┴──────┴──┬───┴──┬───┴──┬───┴──┬───┴──┬───┐  ├──┬───┴──┬───┴──────┴──────┴──────┴──────┘
-//                   │      │      │SNIPE │      │ ▓▓▓ │  │ LCLK │ RCLK │ SCRL │
-//                   └──────┴──────┴──────┴───────┴──────┘  └──────┴──────┴──────┘
+//  └──────┴──────┴──┬───┴──┬───┴──┬───┴──┬───┴──┬───┐  ├──────┬──────┬──────┴──────┴──────┴──────┴ 
+//                   │      │      │SNIPE │      │   │  │      │      │ SCRL │
+//                   └──────┴──────┴──────┴──────┴───┘  └──────┴──────┴──────┘
         mouse_layer {
             label = "MOUSE";
             bindings = <
 &trans     &trans        &trans        &trans         &trans         &trans           &trans         &trans        &trans        &trans        &trans       &trans
 &trans     &trans        &trans        &trans         &trans         &trans           &kp PG_UP      &mkp LCLK     &mkp MCLK     &mkp RCLK     &trans       &trans
 &trans     &trans        &trans        &trans         &trans         &trans           &kp PG_DN      &trans        &trans        &trans        &trans       &trans
-&trans     &trans        &mo SNIPE     &trans         &trans         &mkp LCLK        &mkp RCLK                                               &mo SCROLL
+&trans     &trans        &mo SNIPE     &trans         &trans         &trans           &trans                                                 &mo SCROLL
             >;
         };
 
